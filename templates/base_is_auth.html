@@ -6,6 +6,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+
+    {% if user.is_authenticated %}        
+    Hola,
+        {{ user.username }}
+    {% else %}
+        <a href="{% url "login" %}">Login</a>  
+    {% endif %}
     <div class="mx-auto">
         {% block content %}{% endblock content %}
     </div>
