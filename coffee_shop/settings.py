@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'crispy_forms',
     'crispy_tailwind',
     'getting_started',
@@ -138,3 +139,13 @@ CRISPY_TEMPLATE_PACK = "tailwind"
 LOGIN_REDIRECT_URL = "list_product"
 LOGIN_URL = "login"
 LOGOUT_REDIRECT_URL = "list_product"
+
+# Django Rest Framework
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
