@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-*047&pzd@8)whgjcs=!&u#9lm1mnna3mw^g1ht^sy_#=a%$$+m
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://coffee-shop-i6hb.onrender.com/'
+    'coffee-shop-i6hb.onrender.com'
 ]
 
 
