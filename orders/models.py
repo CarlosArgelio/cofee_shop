@@ -11,6 +11,7 @@ class Order(models.Model):
     def __str__(self) -> str:
         return f"order {self.id} by {self.user}"
 
+
 class OrderProduct(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.PROTECT)
